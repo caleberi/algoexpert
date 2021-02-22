@@ -5,14 +5,12 @@ def trappingInRain(array):
         leftMax=findLeftMax(array,i)
         rightMax=findRightMax(array,i)
         totalTrappedWater += min(leftMax,rightMax)-array[i]
-    return totalTrappedWater
+    return abs(totalTrappedWater)
 
 def findLeftMax(array,pos):
-    print(array[:pos])
-    return max(list(array[:pos]))
+    return max(list(array[:pos+1]))
 
 def findRightMax(array,pos):
-    print(array[pos:])
     return max(list(array[pos:]))
 
-print(trappingInRain([3,0,2,0,4]))
+print(trappingInRain([3,0,2,0,4,9,0,4,8,9]))
