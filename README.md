@@ -1,5 +1,6 @@
 # Algoexpert
 
+problem solving on a coding platform called algoexpert.
 ![algoexpert](https://www.yoreoyster.com/wp-content/uploads/2020/11/AlgoExpert-Review-768x369.jpg)
 
 The leading platform to prepare for coding interviews. Master essential algorithms and data structures, and land your dream job with AlgoExpert `https://www.algoexpert.io/`.
