@@ -22,4 +22,22 @@ def fourNumberSum(array:List[int],targetSum:int)->List[List[int]]:
                 allPairSums[currentSum].append([array[k],array[i]])
     return quadruplets
 
-                
+
+def fourNumberSum(array:List[int],targetSum:int)->List[List[int]]:
+    result = []
+    array.sort()
+    for i in range(len(array)-3):
+        for j in range(i+1,len(array)-2):
+            left = j+1
+            right = len(array)-1
+            while left < right:
+                total_sum  =  array[left] + array[right] + array[i] + array[j]
+                if total_sum == targetSum:
+                    result.append([array[i], array[j], array[left], array[right]])
+                    left += 1
+                    right -=1
+                elif total_sum > targetSum:
+                    right -= 1
+                else:
+                    left += 1
+    return result
