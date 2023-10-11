@@ -14,6 +14,13 @@ func LongestPeak(array []int) int {
 		leftIdx := currentIdx  //  to calculate the left end of the mountain
 		rightIdx := currentIdx //  to calculate the right end of the mountain
 
+		isPeak := false
+		if array[leftIdx-1] < array[currentIdx] && array[rightIdx+1] < array[currentIdx] {
+			isPeak = true
+		}
+		if !isPeak {
+			continue
+		}
 		for leftIdx > 0 {
 			if array[leftIdx-1] >= array[leftIdx] {
 				break
